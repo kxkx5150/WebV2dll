@@ -83,6 +83,13 @@ void set_copydata(HWND hWnd, std::wstring s, int wmmsg)
     SendMessage(hWnd, wmmsg, 0, (LPARAM)&data_to_send);
     delete[] buffer;
 }
+LPTSTR get_msg_string(LPARAM lp)
+{
+    COPYDATASTRUCT* copy_data_structure = { 0 };
+    copy_data_structure = (COPYDATASTRUCT*)lp;
+    LPCWSTR arguments = (LPCWSTR)copy_data_structure->lpData;
+    return (LPTSTR)arguments;
+}
 void set_jsmsg_to_copydata(HWND hWnd, std::wstring s)
 {
     set_copydata(hWnd, s, WM_JSMSG);

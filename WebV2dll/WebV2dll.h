@@ -7,7 +7,6 @@
 #define __DLL_PORT extern "C" __declspec(dllimport)
 #endif
 
-__DLL_PORT void create_randomid();
 __DLL_PORT bool create_webview2(HWND hWnd, int createid, const TCHAR* url);
 
 __DLL_PORT HWND get_main_hwnd(int createid);
@@ -20,3 +19,4 @@ __DLL_PORT void set_startup_script(HWND hWnd, const TCHAR* script);
 __DLL_PORT void set_global_startup_script(const TCHAR* script);
 __DLL_PORT void exec_js(HWND hWnd, const TCHAR* script);
 __DLL_PORT void send_json(HWND hWnd, const TCHAR* jsonstr);
+__DLL_PORT LPTSTR get_msg_string(LPARAM lp);
