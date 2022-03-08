@@ -9,7 +9,7 @@ https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section
 <br>
 
 Windows 11  
-This package installed by default
+Webview2 Runtime installed by default
 <br><br><br>
 
 Webview2  
